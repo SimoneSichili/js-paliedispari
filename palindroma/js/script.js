@@ -2,17 +2,33 @@
 Chiedere all’utente di inserire una parola.
 Creare una funzione per capire se la parola inserita è palindroma. */
 
-// #1 Creo la funziona per la verifica della parola
-function isPalindrome(word) {
+// #1 METODO A Creo la funziona per la verifica della parola 
+/* function isPalindrome(str) {
 
-    var palindrome = word.toLowerCase().split("").reverse().join("");
+    var palindrome = str.toLowerCase().split("").reverse().join("");
 
-    if (word == palindrome) {
+    if (str == palindrome) {
         return true;
     } else {
         return false;
     }
     
+} */
+
+// #1 METODO B Creo la funziona per la verifica della parola
+function isPalindrome(str) {
+    
+    var newStr = "";
+
+    for (var i = str.length - 1; i >= 0; i--) {
+        newStr += str[i];
+    }
+
+    if (str == newStr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 //-------------------------------------------------
