@@ -1,3 +1,8 @@
+/* Palindroma
+Chiedere all’utente di inserire una parola.
+Creare una funzione per capire se la parola inserita è palindroma. */
+
+// #1 Creo la funziona per la verifica della parola
 function isPalindrome(word) {
 
     var palindrome = word.toLowerCase().split("").reverse().join("");
@@ -12,11 +17,11 @@ function isPalindrome(word) {
 
 //-------------------------------------------------
 
+// #2 Chiedo all'utente di inserire una parola
 var userWord =  prompt("Inserisci una parola");
 document.getElementById("user-word").innerHTML = userWord;
 
-
-
+// #3 Verifico che la parola sia palindroma
 if (isPalindrome(userWord)) {
     console.log("la parola è palindroma");
     messaggio = "la parola è palindroma";
